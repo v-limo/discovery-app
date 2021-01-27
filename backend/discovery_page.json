@@ -1,0 +1,21 @@
+{
+  "sections": [
+    {
+      "title": "Popular Restaurants",
+      "restaurants": [
+        ]
+    },
+    {
+      "title": "New Restaurants",
+      "restaurants": [
+       
+      ]
+    },
+    {
+      "title": "Nearby Restaurants",
+      "restaurants": [
+        
+      ]
+    }
+  ]
+}
