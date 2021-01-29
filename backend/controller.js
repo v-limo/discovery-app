@@ -1,4 +1,5 @@
 const { getDistance, distanceConversion } = require('geolib')
+const { isEmpty } = require('lodash')
 const _ = require('lodash')
 const data = require('./restaurants.json')
 
@@ -11,26 +12,38 @@ const closer = (customerLocation) => {
   return closerRestaurants
 }
 
-//getPopular
+//GETPOPULAR
 const getPopular = (restaurants) => {
+  let popularSection = {
+    title: 'Popular Restaurants',
+    restaurants: [],
+  }
+
   let [open, closed] = _.partition(restaurants, ({ online }) => online === true)
 
   let openSorted = _.sortBy(open, (o) => o.popularity).reverse()
   let closedSorted = _.sortBy(closed, (o) => o.popularity).reverse()
 
-return limitTen(openSorted, closedSorted)
+  //limit to 10 restaurants
+  return limitTen(openSorted, closedSorted, popularSection)
 }
 
-// getNew
+// GETNEW
 const getNew = (restaurants) => {
+  let newSection = {
+    title: 'New Restaurants',
+    restaurants: [],
+  }
   // launch_date not older than 4 months.
   let newRestaurants = _.filter(restaurants, ({ launch_date }) => {
     return (
       (new Date().getTime() - new Date(launch_date).getTime()) /
         (1000 * 3600 * 24) <
-      4 * 30
+      7 * 30
     )
   })
+
+  //partition closed and open restaurants
   let [open, closed] = _.partition(
     newRestaurants,
     ({ online }) => online === true
@@ -39,11 +52,18 @@ const getNew = (restaurants) => {
   let openSorted = _.sortBy(open, (o) => o.launch_date).reverse()
   let closedSorted = _.sortBy(closed, (o) => o.launch_date).reverse()
 
-  return limitTen(openSorted, closedSorted)
+  //limit to 10 restaurants
+  return limitTen(openSorted, closedSorted, newSection)
 }
 
-// getNearby
+// GETNEARBY
 const getNearby = (restaurants, customerLocation) => {
+  let nearbySection = {
+    title: 'Nearby Restaurants',
+    restaurants: [],
+  }
+
+  //add relative distance(from customer) property to each restaurant for sorting purposes
   let nearRestaurants = restaurants.map((restaurant) => {
     return {
       ...restaurant,
@@ -58,16 +78,24 @@ const getNearby = (restaurants, customerLocation) => {
 
   let openSorted = _.sortBy(open, (o) => o.distance)
   let closedSorted = _.sortBy(closed, (o) => o.distance)
-  return limitTen(openSorted, closedSorted)
+
+  //limit to 10 restaurants
+  return limitTen(openSorted, closedSorted, nearbySection)
 }
 
-const limitTen = (openSorted, closedSorted) => {
+//limit to Ten and don't return empty section
+const limitTen = (openSorted, closedSorted, section) => {
   if (openSorted.length === 10) {
-    return openSorted
+    section.restaurants = openSorted
+    return section
   } else if (openSorted.length > 10) {
-    return _.take(openSorted, 10)
-  } else {
-    return _.take(_.concat(openSorted, closedSorted), 10)
+    section.restaurants = _.take(openSorted, 10)
+    return section
+  }
+  //don't return empty section
+  else if (openSorted + closedSorted > 0) {
+    section.restaurants = _.take(_.concat(openSorted, closedSorted), 10)
+    return section
   }
 }
 
