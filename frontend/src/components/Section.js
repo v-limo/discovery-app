@@ -11,8 +11,8 @@ var settings = {
   speed: 500,
   slidesToShow: 3,
   slidesToScroll: 3,
-// fade: true,
-  
+  // fade: true,
+
   responsive: [
     {
       breakpoint: 1250,
@@ -32,17 +32,19 @@ var settings = {
 }
 
 export const Section = ({ section }) => {
-  const { title, restaurants } = section
+const { title, restaurants } = section
 
   return (
-    <div className='section'>
-      <h2>{title}</h2>
-      <Slider {...settings}>
+    <div>
+      <h2 style={{ color: '#009de0' }}>
+        { restaurants && title && `${title} ${restaurants.length}/10`}{' '}
+      </h2>
+      <Slider {...settings} className='sections'>
         {restaurants &&
-          restaurants.map((restaurant) => <Restaurant {...{ restaurant }} />)}
+          restaurants.map((restaurant) => (
+            <Restaurant key={restaurant.name} {...{ restaurant }} />
+          ))}
       </Slider>
-    
-
     </div>
   )
 }

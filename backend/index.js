@@ -27,12 +27,16 @@ app.get('/api/discovery', (req, res) => {
   //get close restaurants
   const closerRestaurants = closer(customerLocation)
 
-  // populate discovery
-  discovery.sections.push(
-    getPopular(closerRestaurants),
-    getNew(closerRestaurants),
-    getNearby(closerRestaurants, customerLocation)
-  )
+  // populate discovery && don't return empty section
+  if (getPopular(closerRestaurants).restaurants.length !== 0) {
+    discovery.sections.push(getPopular(closerRestaurants))
+  }
+  if (getNew(closerRestaurants).restaurants.length !== 0) {
+    discovery.sections.push(getNew(closerRestaurants))
+  }
+  if (getNearby(closerRestaurants, customerLocation).restaurants.length !== 0) {
+    discovery.sections.push(getNearby(closerRestaurants, customerLocation))
+  }
 
   res.json(discovery)
 })

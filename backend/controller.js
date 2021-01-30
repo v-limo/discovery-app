@@ -39,7 +39,7 @@ const getNew = (restaurants) => {
     return (
       (new Date().getTime() - new Date(launch_date).getTime()) /
         (1000 * 3600 * 24) <
-      7 * 30
+      4 * 30
     )
   })
 
@@ -83,7 +83,7 @@ const getNearby = (restaurants, customerLocation) => {
   return limitTen(openSorted, closedSorted, nearbySection)
 }
 
-//limit to Ten and don't return empty section
+//limit to Ten
 const limitTen = (openSorted, closedSorted, section) => {
   if (openSorted.length === 10) {
     section.restaurants = openSorted
@@ -91,9 +91,8 @@ const limitTen = (openSorted, closedSorted, section) => {
   } else if (openSorted.length > 10) {
     section.restaurants = _.take(openSorted, 10)
     return section
-  }
-  //don't return empty section
-  else if (openSorted + closedSorted > 0) {
+  } else {
+    //  (openSorted + closedSorted > 0)
     section.restaurants = _.take(_.concat(openSorted, closedSorted), 10)
     return section
   }
