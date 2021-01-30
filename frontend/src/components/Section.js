@@ -41,9 +41,8 @@ export const Section = ({ section }) => {
         {restaurants &&
           restaurants.map((restaurant) => <Restaurant {...{ restaurant }} />)}
       </Slider>
-      <br />
-      <br />
-      <hr /> <hr />
+    
+
     </div>
   )
 }
