@@ -24,7 +24,7 @@ app.get('/api/discovery', (req, res) => {
   //customer's location
   const customerLocation = [req.query.lon, req.query.lat]
 
-  //get close restaurants
+  //get all close restaurants (within 1.5km)
   const closerRestaurants = closer(customerLocation)
 
   // populate discovery && don't return empty section

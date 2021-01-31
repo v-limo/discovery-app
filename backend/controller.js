@@ -5,7 +5,7 @@ const data = require('./restaurants.json')
 
 //Closer* - (base) all close restaurants
 const closer = (customerLocation) => {
-  // closer than 1.5 kilometers
+  // within 1.5 kilometers
   const closerRestaurants = data.restaurants.filter(
     ({ location }) => getDistance(customerLocation, location) < 1500
   )

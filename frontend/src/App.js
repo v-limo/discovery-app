@@ -23,15 +23,13 @@ function App() {
     e.preventDefault()
     Geocode.setLanguage('en')
     Geocode.setRegion('fi')
+    //safe? absolutely NO!
     Geocode.setApiKey('AIzaSyDAcZPtFk1kaiV3Cy2HOltxOQiANNHXZP4')
     Geocode.fromAddress(address).then(
       (response) => {
         const { lat, lng } = response.results[0].geometry.location
-        console.log(query)
         let location = `lat=${lat}&lon=${lng}`
         setQuery(location)
-        console.log(lat, lng)
-        console.log(query)
       },
       (error) => {
         console.error(error)
@@ -44,11 +42,9 @@ function App() {
       let url = `http://localhost:3001/api/discovery?${query}`
       axios
         .get(url)
-        // .then((res) => res.json())
         .then((resource) => setData(resource.data))
         .catch((error) => console.error(error))
     }
-    console.log(query)
     fechData()
   }, [query])
 
@@ -57,9 +53,8 @@ function App() {
       <h1>
         <img src={logo} alt='logo' /> Wolt Summer 2021 Internship
       </h1>
-
       <Address {...{ handlesubmit, address, handlechange }} />
-      <Discovery {...{ data }} />
+      <Discovery {...{ data, address }} />
     </div>
   )
 }
