@@ -33,28 +33,27 @@
 
 ## :dart: About
 
-This project is a solution to Wolt Summer 2021 Internship <a href="https://github.com/woltapp/summer2021-internship">Preliminary Assignment</a> using Express and React in backend and frontend respectively. I had a lot of fun (and interesting challenges) completing this assignment to an extend I decided to make it 'full-stack'. Essential part is in the backend.
-
-Frontend part of the project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a solution to Wolt Summer 2021 Internship [Preliminary Assignment](https://github.com/woltapp/summer2021-internship) using Express and React in backend and frontend respectively. I had a lot of fun (and interesting challenges) completing this assignment to an extend I decided to make it 'full-stack'. Essential part is in the backend. Frontend part of the project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## :sparkles: Features
-:heavy_check_mark: frontend dependency libraries;\
 
-1. axios: 0.21.1            - for fetching 
+:heavy_check_mark: frontend dependency libraries
+
+1. axios: 0.21.1       - for fetching
 2. data blurhash: 1.1.3     - placeholders for images
-3. react-blurhash: 0.1.3    - placeholders for images
-4. slick-carousel: 1.8.1    - building responsive and customizable carousels/sliders 
-5. react-slick: 0.28.0      - building responsive and customizable carousels/sliders
-6. react-geocode: 0.2.2     -  converting between geographic coordinates and addresses
+3. react-blurhash: 0.1.3   - placeholders for images
+4. slick-carousel: 1.8.1   - building responsive and customizable carousels/sliders
+5. react-slick: 0.28.0    - building responsive and customizable carousels/sliders
+6. react-geocode: 0.2.2   -  converting between geographic coordinates and addresses
 
-:heavy_check_mark: backend dependency libraries;\
+:heavy_check_mark: backend dependency libraries
 
-   1. cors: 2.8.5 
-   2. express: 4.17.1
-   3. lodash: 4.17.20
-   4. morgan: 1.10.0 
-   5. nodemon: 2.0.7 
-   6. geolib: 3.3.1 
+1.  cors: 2.8.5
+2.  express: 4.17.1
+3.  lodash: 4.17.20
+4.  morgan: 1.10.0
+5.  nodemon: 2.0.7
+6.  geolib: 3.3.1
 
 ## :rocket: Technologies
 
@@ -73,6 +72,7 @@ Before starting :checkered_flag:, you need to have [Node](https://nodejs.org/en/
 
 # Clone this project
 $ git clone https://github.com/LimoVincent/wolt-2021-internship-assignment
+
 
 ```
 
@@ -122,8 +122,8 @@ $ npm run dev
 
 ```
 
-<div align="center"  > 
-  <img src="./frontend/src/img/component_design.GIF" alt="Wolt 2021 Internship Assignment" />
+<div align="center"  >
+  <img src="./frontend/src/img/components.GIF" alt="" />
 
 &#xa0;
 
@@ -133,7 +133,7 @@ $ npm run dev
 
 This project is under license from MIT. For more details, see the [LICENSE](LICENSE.md) file.
 
-Made with :heart: by <a href="https://github.com/LimoVincent/" target="_blank">VINCENT LIMO</a>
+Made with :heart: by <a href="https://github.com/LimoVincent/" target="_blank">Vincent</a>
 
 &#xa0;
 
