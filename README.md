@@ -1,10 +1,3 @@
-<div align="center" id="top"> 
-  <img src="./frontend/src/img/app.GIF" alt="Wolt 2021 Internship Assignment" />
-
-&#xa0;
-
-</div>
-
 <h1 align="center">Wolt 2021 Internship Assignment</h1>
 
 <p align="center">
@@ -15,21 +8,7 @@
   <img alt="Repository size" src="https://img.shields.io/github/repo-size/VincentLimo/wolt-2021-internship-assignment?color=56BEB8">
 
   <img alt="License" src="https://img.shields.io/github/license/VincentLimo/wolt-2021-internship-assignment?color=56BEB8">
-
-  <!-- <img alt="Github issues" src="https://img.shields.io/github/issues/{{VincentLimo}}/wolt-2021-internship-assignment?color=56BEB8" /> -->
-
-  <!-- <img alt="Github forks" src="https://img.shields.io/github/forks/{{VincentLimo}}/wolt-2021-internship-assignment?color=56BEB8" /> -->
-
-  <!-- <img alt="Github stars" src="https://img.shields.io/github/stars/{{VincentLimo}}/wolt-2021-internship-assignment?color=56BEB8" /> -->
 </p>
-
-<!-- Status -->
-
-<!-- <h4 align="center">
-	🚧  Wolt 2021 Internship Assignment 🚀 Under construction...  🚧
-</h4>
-
-<hr> -->
 
 <p align="center">
   <a href="#dart-about">About</a> &#xa0; | &#xa0; 
@@ -38,15 +17,30 @@
   <a href="#white_check_mark-requirements">Requirements</a> &#xa0; | &#xa0;
   <a href="#checkered_flag-starting">Starting</a> &#xa0; | &#xa0;
   <a href="#memo-license">License</a> &#xa0; | &#xa0;
-  <a href="https://github.com/{{VincentLimo}}" target="_blank">Author</a>
+  <a href="https://github.com/VincentLimo" target="_blank">Author</a>
 </p>
+<div align="center" id="top" style="
+   overflow: scroll;
+   width: fit-content;
+   height: 200px;">
+ <img src="./frontend/src/img/app.GIF" alt="Wolt 2021 Internship Assignment" />
 
+&#xa0;
+
+</div>
 <br>
+<div align="center" id="top"  style="
+  height: 250px;
+  overflow: scroll;" > 
+  <img src="./frontend/src/img/app.GIF" alt="Wolt 2021 Internship Assignment" />
+
+&#xa0;
+
+</div>
 
 ## :dart: About
 
 This project tries to complete Wolt Summer 2021 Internship <a href="https://github.com/woltapp/summer2021-internship">Preliminary Assignment</a>
-
 
 ## :sparkles: Features
 
@@ -89,7 +83,6 @@ $ npm i react-geocode
 $ npm i npm install react-slick --save
 $ npm i slick-carousel
 
-
 # Run the project
 $ npm start
 
@@ -117,7 +110,7 @@ $ npm run dev
 
 # The server will initialize in the <http://localhost:3001>
 
-# check for example for  <http://localhost:3001/api/discovery?lat=60.17091&lon=24.94101>
+# check for example;  <http://localhost:3001/api/discovery?lat=60.17091&lon=24.94101>
 
 ```
 
