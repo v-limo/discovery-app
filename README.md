@@ -1,9 +1,8 @@
 <div align="center" id="top"> 
   <img src="./frontend/src/img/app.GIF" alt="Wolt 2021 Internship Assignment" />
 
-  &#xa0;
-  
-  <!-- <a href="https://wolt2021internshipassignment.netlify.app">Demo</a> -->
+&#xa0;
+
 </div>
 
 <h1 align="center">Wolt 2021 Internship Assignment</h1>
@@ -26,9 +25,9 @@
 
 <!-- Status -->
 
-<!-- <h4 align="center"> 
+<!-- <h4 align="center">
 	🚧  Wolt 2021 Internship Assignment 🚀 Under construction...  🚧
-</h4> 
+</h4>
 
 <hr> -->
 
@@ -44,29 +43,29 @@
 
 <br>
 
-## :dart: About ##
+## :dart: About
 
-This project tries 
+This project tries to complete Wolt Summer 2021 Internship <a href="https://github.com/woltapp/summer2021-internship">Preliminary Assignment</a>
 
-## :sparkles: Features ##
+
+## :sparkles: Features
 
 :heavy_check_mark: Feature 1;\
 :heavy_check_mark: Feature 2;\
 :heavy_check_mark: Feature 3;
 
-## :rocket: Technologies ##
+## :rocket: Technologies
 
 The following tools were used in this project:
 
 - [Node.js](https://nodejs.org/en/)
 - [React](https://pt-br.reactjs.org/)
 
-
-## :white_check_mark: Requirements ##
+## :white_check_mark: Requirements
 
 Before starting :checkered_flag:, you need to have [Node](https://nodejs.org/en/) installed.
 
-## :checkered_flag: Starting ##
+## :checkered_flag: Starting
 
 ```bash
 
@@ -75,7 +74,7 @@ $ git clone https://github.com/LimoVincent/wolt-2021-internship-assignment
 
 ```
 
-### Frontend ###
+### Frontend
 
 ```bash
 
@@ -96,7 +95,8 @@ $ npm start
 
 # The server will initialize in the <http://localhost:3000>
 ```
-### Backend ###
+
+### Backend
 
 ```bash
 # Access
@@ -117,14 +117,13 @@ $ npm run dev
 
 # The server will initialize in the <http://localhost:3001>
 
-# check for example for  <http://localhost:3001/api/discovery?lat=60.17091&lon=24.94101> 
+# check for example for  <http://localhost:3001/api/discovery?lat=60.17091&lon=24.94101>
 
 ```
 
-## :memo: License ##
+## :memo: License
 
 This project is under license from MIT. For more details, see the [LICENSE](LICENSE.md) file.
-
 
 Made with :heart: by <a href="https://github.com/LimoVincent/" target="_blank">VINCENT LIMO</a>
 
