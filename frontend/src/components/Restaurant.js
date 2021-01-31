@@ -7,7 +7,15 @@ function Restaurant({ restaurant }) {
     <div className='restaurant'>
       {restaurant &&
         [restaurant].map(
-          ({ blurhash, launch_date, location, name, online, popularity }) => (
+          ({
+            blurhash,
+            launch_date,
+            location,
+            distance,
+            name,
+            online,
+            popularity,
+          }) => (
             <div key={blurhash}>
               <a href='//#endregion'>
                 <div className='restaurant-blurhash'>
@@ -18,16 +26,16 @@ function Restaurant({ restaurant }) {
                     resolutionX={32}
                     resolutionY={32}
                     punch={1}
-                    margin={2}
+                    radius={2}
                   />
                 </div>
               </a>
 
               <div className='restaurant-info'>
                 <h3>{name}</h3>
-                <h5 style={{ color: online ? 'green' : 'red' }}>
+                <h4 style={{ color: online ? 'green' : 'red' }}>
                   {online ? 'Open' : 'Closed'}
-                </h5>
+                </h4>
               </div>
             </div>
           )

@@ -35,17 +35,22 @@ img {
 
 .restaurant-blurhash {
   position: relative;
-  z-index: 1;
   border-radius: 1rem;
+  z-index: 1;
 }
 
 .restaurant-info {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  position: relative;
   bottom: 4rem;
   z-index: 2;
+  width: 300px;
+}
+
+.restaurant-info {
+  
 }
 
 form input {

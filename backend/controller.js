@@ -19,7 +19,7 @@ const getPopular = (restaurants) => {
     restaurants: [],
   }
 
-  let [open, closed] = _.partition(restaurants, ({ online }) => online === true)
+  let [open, closed] = _.partition(restaurants, ({ online }) => online)
 
   let openSorted = _.sortBy(open, (o) => o.popularity).reverse()
   let closedSorted = _.sortBy(closed, (o) => o.popularity).reverse()
@@ -44,10 +44,7 @@ const getNew = (restaurants) => {
   })
 
   //partition closed and open restaurants
-  let [open, closed] = _.partition(
-    newRestaurants,
-    ({ online }) => online === true
-  )
+  let [open, closed] = _.partition(newRestaurants, ({ online }) => online)
 
   let openSorted = _.sortBy(open, (o) => o.launch_date).reverse()
   let closedSorted = _.sortBy(closed, (o) => o.launch_date).reverse()
@@ -71,10 +68,7 @@ const getNearby = (restaurants, customerLocation) => {
     }
   })
 
-  let [open, closed] = _.partition(
-    nearRestaurants,
-    ({ online }) => online === true
-  )
+  let [open, closed] = _.partition(nearRestaurants, ({ online }) => online)
 
   let openSorted = _.sortBy(open, (o) => o.distance)
   let closedSorted = _.sortBy(closed, (o) => o.distance)

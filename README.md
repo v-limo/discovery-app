@@ -31,6 +31,8 @@
 
 </div>
 
+Website view
+
 ## :dart: About
 
 This project is a solution to Wolt Summer 2021 Internship [Preliminary Assignment](https://github.com/woltapp/summer2021-internship) using Express and React in backend and frontend respectively. I had a lot of fun (and interesting challenges) completing this assignment to an extend I decided to make it 'full-stack'. Essential part is in the backend. Frontend part of the project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -133,7 +135,9 @@ $ npm run dev
 
 This project is under license from MIT. For more details, see the [LICENSE](LICENSE.md) file.
 
-Made with :heart: by <a href="https://github.com/LimoVincent/" target="_blank">Vincent</a>
+Made with :heart: by <a href="https://github.com/LimoVincent" target="_blank">Vincent Limo</a>
+
+Components representation
 
 &#xa0;
 

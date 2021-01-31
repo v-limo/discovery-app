@@ -8,7 +8,7 @@ import 'slick-carousel/slick/slick-theme.css'
 
 var settings = {
   dots: true,
-  infinite: true,
+  infinite: false,
   speed: 500,
   slidesToShow: 3,
   slidesToScroll: 3,
@@ -33,13 +33,13 @@ var settings = {
 }
 
 export const Section = ({ section }) => {
-const { title, restaurants } = section
+  const { title, restaurants } = section
 
   return (
     <div>
-      <h2 style={{ color: '#009de0' }}>
-        { restaurants && title && `${title} ${restaurants.length}/10`}{' '}
-      </h2>
+      <h1 style={{ color: '#009de0' }}>
+        {restaurants && title && `${title} ${restaurants.length}/10`}{' '}
+      </h1>
       <Slider {...settings} className='sections'>
         {restaurants &&
           restaurants.map((restaurant) => (
