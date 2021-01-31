@@ -127,8 +127,11 @@ $ npm run dev
 <div align="center"  >
   <img src="./frontend/src/img/components.GIF" alt="" />
 &#xa0;
-</div>
 Components representation
+</div>
+
+
+
 ## :memo: License
 
 This project is under license from MIT. For more details, see the [LICENSE](LICENSE.md) file.
