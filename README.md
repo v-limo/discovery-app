@@ -1,5 +1,5 @@
 <div align="center" id="top"> 
-  <img src="./.github/app.gif" alt="Wolt 2021 Internship Assignment" />
+  <img src="./frontend/src/img/app.GIF" alt="Wolt 2021 Internship Assignment" />
 
   &#xa0;
   
@@ -46,7 +46,7 @@
 
 ## :dart: About ##
 
-Describe your project
+This project tries 
 
 ## :sparkles: Features ##
 
