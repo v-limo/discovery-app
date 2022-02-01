@@ -26,12 +26,10 @@
   height: 250px;
   overflow: scroll;" > 
   <img src="./frontend/src/img/app.GIF" alt="Wolt 2021 Internship Assignment" />
-
 &#xa0;
-
 </div>
-
 Website view
+## [live demo]
 
 ## :dart: About
 
@@ -88,10 +86,11 @@ $ cd frontend
 
 # Install frontend dependencies
 $ npm i axios
-$ npm i --save blurhash react-blurhash
-$ npm i react-geocode
-$ npm i npm install react-slick --save
-$ npm i slick-carousel
+
+   blurhash react-blurhash
+   i react-geocode
+   react-slick --save
+   slick-carousel
 
 # Run the project
 $ npm start
@@ -107,12 +106,13 @@ $ cd wolt-2021-internship-assignment
 $ cd backend
 
 # Install backend dependencies
-$ npm i express
-$ npm i cors
-$ npm i geolib
-$ npm i lodash
-$ npm i morgan
-$ npm i nodemon
+$ npm i
+    express
+    cors
+    geolib
+    lodash
+    morgan
+    nodemon
 
 
 # Run the project
@@ -125,20 +125,18 @@ $ npm run dev
 ```
 
 <div align="center"  >
-  <img src="./frontend/src/img/components.GIF" alt="" />
+     <img src="./frontend/src/img/components.GIF" alt="" />
 &#xa0;
+
 Components representation
+
 </div>
-
-
 
 ## :memo: License
 
 This project is under license from MIT. For more details, see the [LICENSE](LICENSE.md) file.
 
 Made with :heart: by <a href="https://github.com/LimoVincent" target="_blank">Vincent Limo</a>
-
-
 
 &#xa0;
 
