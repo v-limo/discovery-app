@@ -7,7 +7,7 @@ import axios from 'axios'
 import { Discovery } from './components/Discovery'
 import Address from './components/Address'
 
-import logo from './img/wolt.jpg'
+import logo from './img/logo.jpeg'
 
 function App() {
   const [data, setData] = useState()
@@ -50,11 +50,30 @@ function App() {
 
   return (
     <div className='app'>
-      <h1>
-        <img src={logo} alt='logo' /> Wolt Summer 2021 Internship
-      </h1>
+      <header>
+        <img src={logo} alt='logo' />
+        <h1> Wolt Summer 2021 Internship </h1>
+        <div>
+          <nav>
+            <ul role='tree'>
+              <li role='treeitem'>
+                <a href='/'>Home</a>
+              </li>
+              <li role='treeitem'>
+                <a href='/'>BlogList</a>
+              </li>
+              <li role='treeitem'>
+                <a href='/'>Nowhere</a>
+              </li>
+              <li role='treeitem'>
+                <a href='/'>Nowhere</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
       <Address {...{ handlesubmit, address, handlechange }} />
-      <Discovery {...{ data, address }} />
+      <Discovery {...{ data, address }} />{' '}
     </div>
   )
 }

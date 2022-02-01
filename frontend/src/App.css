@@ -1,25 +1,30 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  height: 100%;
-  background-color: #f7f8f5;
+  font-family: 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell',
+    'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  min-height: 100vh;
 }
 
 img {
   height: 2rem;
   width: auto;
+  object-fit: cover;
 }
+
 .app {
   background-color: #cbe1ad;
   padding: 2rem;
-  border-radius: 1rem;
-  font-size: 16px;
-  color: rgb(14, 13, 13);
-  margin: 1% 15%;
+  max-width: 1049px;
+  margin: 0 auto;
+}
+
+header {
+  background-color: 'red';
 }
 
 .sections {
@@ -50,16 +55,23 @@ img {
 }
 
 .restaurant-info {
-  
+  /* background-color: "red" */
 }
 
 form input {
-  width: 90%;
+  width: 50%;
   padding: 0.5rem;
   margin: 1rem 2rem;
-  border-radius: 1rem;
+  border-radius: 0.2rem;
 }
+
+form input button {
+  width: 50%;
+  padding: 0.5rem;
+  margin: 1rem 2rem;
+  border-radius: 0.2rem;
+}
+
 input:focus {
   background-color: #f2f3f5;
-  border-radius: 1rem;
 }
