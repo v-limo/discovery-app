@@ -1,143 +1,108 @@
-<h1 align="center">Wolt 2021 Internship Assignment</h1>
+# Summer 2021 internship
 
-<p align="center">
-  <img alt="Github top language" src="https://img.shields.io/github/languages/top/VincentLimo/wolt-2021-internship-assignment?color=56BEB8">
+# Description
 
-  <img alt="Github language count" src="https://img.shields.io/github/languages/count/VincentLimo/wolt-2021-internship-assignment?color=56BEB8">
+This is very simple fullstack platform built with Reactjs, Express.
 
-  <img alt="Repository size" src="https://img.shields.io/github/repo-size/VincentLimo/wolt-2021-internship-assignment?color=56BEB8">
+## Features
 
-  <img alt="License" src="https://img.shields.io/github/license/VincentLimo/wolt-2021-internship-assignment?color=56BEB8">
-</p>
+This app is a solution to both parts of wolt's 2021 preliminary [assignment](https://github.com/woltapp/summer2021-internship) requirements
 
-<p align="center">
-  <a href="#dart-about">About</a> &#xa0; | &#xa0; 
-  <a href="#sparkles-features">Features</a> &#xa0; | &#xa0;
-  <a href="#rocket-technologies">Technologies</a> &#xa0; | &#xa0;
-  <a href="#white_check_mark-requirements">Requirements</a> &#xa0; | &#xa0;
-  <a href="#checkered_flag-starting">Starting</a> &#xa0; | &#xa0;
-  <a href="#memo-license">License</a> &#xa0; | &#xa0;
-  <a href="https://github.com/VincentLimo" target="_blank">Author</a>
-</p>
+## Live demo
+
+A [backend ](https://github.com/v-limo/todo) and [frontend]() live demos of the app are hosted on Heroku and netflify respectively.
+
+_Due to demo reasons and Heroku free terms, if an app receives no web traffic in a 30-minute period, it will sleep. Therefore, during the first launch, the application may take longer to load than usual, approximately 15 - 20 seconds. So please be patient and wait for the app to launch. Subsequent launches will be relatively fast._
+
+## Technology stack
+
+> ### FrontEnd
+>
+> - React
+> - React Hooks
+> - React router
+> - Netflify hosting
+>   <br>
+
+> ### BackEnd
+>
+> - Node
+> - Express
+> - Heroku hosting
+>   <br>
+
+## Usage
+
+Clone this repository to the desired location
+
+```Shell
+git clone git@github.com:woltapp/summer2021-internship.git
+```
 
 <br>
 
-<div align="center" id="top"  style="
-  height: 250px;
-  overflow: scroll;" > 
-  <img src="./frontend/src/img/app.GIF" alt="Wolt 2021 Internship Assignment" />
-&#xa0;
-</div>
-Website view
-## [live demo]
+### Env Variables
 
-## :dart: About
+Create a .env file in the root and add the following
 
-This project is a solution to Wolt Summer 2021 Internship [Preliminary Assignment](https://github.com/woltapp/summer2021-internship) using Express and React in backend and frontend respectively. I had a lot of fun (and interesting challenges) completing this assignment to an extend I decided to make it 'full-stack'. Essential part is in the backend. Frontend part of the project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## :sparkles: Features
-
-:heavy_check_mark: frontend dependency libraries
-
-1. axios: 0.21.1       - for fetching
-2. data blurhash: 1.1.3     - placeholders for images
-3. react-blurhash: 0.1.3   - placeholders for images
-4. slick-carousel: 1.8.1   - building responsive and customizable carousels/sliders
-5. react-slick: 0.28.0    - building responsive and customizable carousels/sliders
-6. react-geocode: 0.2.2   -  converting between geographic coordinates and addresses
-
-:heavy_check_mark: backend dependency libraries
-
-1.  cors: 2.8.5
-2.  express: 4.17.1
-3.  lodash: 4.17.20
-4.  morgan: 1.10.0
-5.  nodemon: 2.0.7
-6.  geolib: 3.3.1
-
-## :rocket: Technologies
-
-The following tools were used in this project:
-
-- [Node.js](https://nodejs.org/en/)
-- [React](https://reactjs.org/)
-
-## :white_check_mark: Requirements
-
-Before starting :checkered_flag:, you need to have [Node](https://nodejs.org/en/) installed.
-
-## :checkered_flag: Starting
-
-```bash
-
-# Clone this project
-$ git clone https://github.com/LimoVincent/wolt-2021-internship-assignment
-
+```
+NODE_ENV = development
+PORT = 3001
 
 ```
 
-### Frontend
-
-```bash
-
-# Access
-$ cd wolt-2021-internship-assignment
-$ cd frontend
-
-# Install frontend dependencies
-$ npm i axios
-
-   blurhash react-blurhash
-   i react-geocode
-   react-slick --save
-   slick-carousel
-
-# Run the project
-$ npm start
-
-# The server will initialize in the <http://localhost:3000>
-```
-
-### Backend
-
-```bash
-# Access
-$ cd wolt-2021-internship-assignment
-$ cd backend
-
-# Install backend dependencies
-$ npm i
-    express
-    cors
-    geolib
-    lodash
-    morgan
-    nodemon
-
-
-# Run the project
-$ npm run dev
-
-# The server will initialize in the <http://localhost:3001>
-
-# check for example;  <http://localhost:3001/api/discovery?lat=60.17091&lon=24.94101>
+### Install Dependencies (frontend & backend)
 
 ```
 
-<div align="center"  >
-     <img src="./frontend/src/img/components.GIF" alt="" />
-&#xa0;
+cd frontend
+npm install
 
-Components representation
+```
 
-</div>
+backend
 
-## :memo: License
+```
+cd backend
+npm install
 
-This project is under license from MIT. For more details, see the [LICENSE](LICENSE.md) file.
+```
 
-Made with :heart: by <a href="https://github.com/LimoVincent" target="_blank">Vincent Limo</a>
+### Run
 
-&#xa0;
+```
+# Run backend only
+cd backend
+npm run start
+```
 
-<a href="#top">Back to top</a>
+```
+
+# Run frontend only
+cd frontend
+npm run start
+```
+
+## Build & Deploy
+
+```
+# Create frontend prod build
+cd frontend
+npm run build
+```
+
+### Contributing
+
+Contributions are highly appreciated. In general, I follow the "fork-and-pull" Git workflow.
+
+1. **Fork** this repo
+2. **Clone** the project to your own machine
+3. **Commit** changes to your own branch
+4. **Push** your work back up to your fork
+5. **Submit** a Pull request so that I can review your changes
+
+**NOTE:** Be sure to merge the latest from "upstream" before making a pull request!
+
+### License
+
+MIT license
