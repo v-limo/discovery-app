@@ -1,7 +1,7 @@
 const { getDistance, distanceConversion } = require('geolib')
 const { isEmpty } = require('lodash')
 const _ = require('lodash')
-const data = require('./restaurants.json')
+const data = require('../restaurants.json')
 
 //Closer* - (base) all close restaurants
 const closer = (customerLocation) => {
@@ -34,10 +34,10 @@ const getNew = (restaurants) => {
     title: 'New Restaurants',
     restaurants: [],
   }
-  // launch_date not older than 4 months.
+  // launch_date not older than 4 months. NOTE: from 2021-01-31
   let newRestaurants = _.filter(restaurants, ({ launch_date }) => {
     return (
-      (new Date().getTime() - new Date(launch_date).getTime()) /
+      (new Date('2021-01-31').getTime() - new Date(launch_date).getTime()) /
         (1000 * 3600 * 24) <
       4 * 30
     )
