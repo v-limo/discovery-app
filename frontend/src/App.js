@@ -12,7 +12,7 @@ import logo from './img/logo.jpeg'
 function App() {
   const [data, setData] = useState()
 
-  const [query, setQuery] = useState('lat=60.1709&lon=24.941')
+  const [query, setQuery] = useState('lat=60.17&lon=24.9')
   const [address, setAddress] = useState('')
 
   const handlechange = (e) => {
@@ -23,8 +23,8 @@ function App() {
     e.preventDefault()
     Geocode.setLanguage('en')
     Geocode.setRegion('fi')
-    //safe? absolutely NO!
-    Geocode.setApiKey('AIzaSyDAcZPtFk1kaiV3Cy2HOltxOQiANNHXZP4')
+
+    Geocode.setApiKey(process.env.REACT_APP_API_KEY)
     Geocode.fromAddress(address).then(
       (response) => {
         const { lat, lng } = response.results[0].geometry.location
@@ -39,38 +39,21 @@ function App() {
 
   useEffect(() => {
     const fechData = async () => {
-      let url = `http://localhost:3001/api/discovery?${query}`
+      let url = `https://wolt-backend.herokuapp.com/api/discovery?${query}`
       axios
         .get(url)
         .then((resource) => setData(resource.data))
         .catch((error) => console.error(error))
     }
-    fechData()
+    if (query) {
+      fechData()
+    }
   }, [query])
-
   return (
     <div className='app'>
       <header>
         <img src={logo} alt='logo' />
         <h1> Wolt Summer 2021 Internship </h1>
-        <div>
-          <nav>
-            <ul role='tree'>
-              <li role='treeitem'>
-                <a href='/'>Home</a>
-              </li>
-              <li role='treeitem'>
-                <a href='/'>BlogList</a>
-              </li>
-              <li role='treeitem'>
-                <a href='/'>Nowhere</a>
-              </li>
-              <li role='treeitem'>
-                <a href='/'>Nowhere</a>
-              </li>
-            </ul>
-          </nav>
-        </div>
       </header>
       <Address {...{ handlesubmit, address, handlechange }} />
       <Discovery {...{ data, address }} />{' '}

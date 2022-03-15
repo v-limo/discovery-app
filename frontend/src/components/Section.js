@@ -34,7 +34,6 @@ var settings = {
 
 export const Section = ({ section }) => {
   const { title, restaurants } = section
-
   return (
     <div>
       <h1 style={{ color: '#009de0' }}>
