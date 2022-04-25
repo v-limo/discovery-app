@@ -20,7 +20,7 @@ app.get('/', (req, res) => {
   res.json({
     'OK : ✅': new Date().toISOString(),
     example_resource:
-      'https://wolt-app.herokuapp.com/v1/api/discovery?lat=60.17091&lon=24.94101',
+      'https://wolt-app.herokuapp.com/api/v1/discovery?lat=60.17091&lon=24.94101',
   })
 })
 
