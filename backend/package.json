@@ -8,6 +8,9 @@
   },
   "author": "Bowden Kelly",
   "license": "MIT",
+  "engines": {
+    "node": "16.x"
+  },
   "scripts": {
     "start": "node dist/server.js",
     "start:dev": "nodemon src/server.ts",
@@ -88,4 +91,3 @@
     "testEnvironment": "node"
   }
 }
-
