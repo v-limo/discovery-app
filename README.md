@@ -10,7 +10,7 @@ This app is a solution to both parts of wolt's 2021 preliminary [assignment](htt
 
 ## Live demo
 
-A [backend ](https://wolt-backend.herokuapp.com/api/discovery?lat=60.17091&lon=24.94101) and [frontend](https://woldrag.netlify.app) live demos of the app are hosted on Heroku and netflify respectively.
+A [backend ](https://wolt-app.herokuapp.com) and [frontend](https://woldrag.netlify.app) live demos of the app are hosted on Heroku and netflify respectively.
 
 _Due to demo reasons and Heroku free terms, if an app receives no web traffic in a 30-minute period, it will sleep. Therefore, during the first launch, the application may take longer to load than usual, approximately 15 - 20 seconds. So please be patient and wait for the app to launch. Subsequent launches will be relatively fast._
 
@@ -36,7 +36,7 @@ _Due to demo reasons and Heroku free terms, if an app receives no web traffic in
 Clone this repository to the desired location
 
 ```Shell
-git clone git@github.com:woltapp/summer2021-internship.git
+git clone git@github.com:woltapp/wolt_discovery_app.git
 ```
 
 <br>
