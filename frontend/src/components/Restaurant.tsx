@@ -16,36 +16,58 @@ const Restaurant = ({ restaurant }: Props) => {
   return (
     <Card
       sx={{
-        backgroundColor: 'rgba(0,0,0,0.1)',
-        mx: 'auto',
-        p: 2,
-        width: '95%',
+        boxShadow: '0px 1px 5px 0px rgba(0,0,0,0.2)',
+        m: '15px',
+        border: '1px solid #e0e0e0',
+        borderRadius: '10px',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        cursor: 'pointer',
       }}
     >
       <Blurhash
         hash={blurhash}
-        width={300}
-        height={300}
+        width={400}
+        height={200}
         resolutionX={32}
         resolutionY={32}
         punch={1}
       />
 
-      <Box>
+      <Box
+        sx={{
+          p: 2,
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+        }}
+      >
         <Typography variant='h5' component='h2'>
           {name}
         </Typography>
         <Typography variant='body1' component='p'>
-          location : {location[0] + ',' + location[1]}
+          {`➡ Location : [${location[0]}, ${location[1]}]`}
+        </Typography>
+        <Typography
+          variant='body1'
+          component='p'
+          color={online ? 'green' : 'red'}
+        >
+          ➡{online ? 'Online' : 'Offline'}
+        </Typography>
+        <Typography
+          variant='body1'
+          component='p'
+          sx={{
+            opacity: { popularity },
+          }}
+        >
+          {`➡ Popularity : ${(popularity * 100).toFixed(3)}% `}
         </Typography>
         <Typography variant='body1' component='p'>
-          {online ? 'Online' : 'Offline'}
-        </Typography>
-        <Typography variant='body1' component='p'>
-          {popularity * 100}% popularity
-        </Typography>
-        <Typography variant='body1' component='p'>
-          launch date : {launch_date}
+          {`➡ Launch date : ${launch_date} `}
         </Typography>
       </Box>
     </Card>

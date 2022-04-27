@@ -4,8 +4,6 @@ import 'slick-carousel/slick/slick-theme.css'
 import React from 'react'
 import Slider from 'react-slick'
 
-import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos'
-import NavigateNextIcon from '@mui/icons-material/NavigateNext'
 import { Box, Divider, Typography } from '@mui/material'
 
 import { SectionType } from '../types/restaurantsType'
@@ -13,13 +11,30 @@ import Restaurant from './Restaurant'
 
 const settings = {
   dots: true,
-  infinite: true,
+  infinite: false,
   speed: 500,
   slidesToShow: 3,
   slidesToScroll: 3,
   adaptiveHeight: true,
-  nextArrow: <NavigateNextIcon />,
-  prevArrow: <ArrowBackIosIcon />,
+  // nextArrow: <NavigateNextIcon color='secondary' fontSize='large' />,
+  // prevArrow: <NavigateBeforeIcon color='secondary' fontSize='large' />,
+  responsive: [
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        initialSlide: 2,
+      },
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      },
+    },
+  ],
 }
 
 type Props = {
@@ -31,23 +46,33 @@ export const Section = ({ section }: Props) => {
   return (
     <Box
       sx={{
-        my: '30px',
+        my: '12px',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'space-around',
       }}
     >
-      <Typography variant='h4' component='h2' gutterBottom>
-        {title}
-      </Typography>
-      <Slider {...settings} >
-        {restaurants &&
-          restaurants.map((restaurant) => (
-            <Restaurant restaurant={restaurant} key={restaurant.blurhash} />
-          ))}
-      </Slider>
-      <Divider sx={{ my: '30px', display: 'flex'}}/>
+      {restaurants && restaurants.length > 0 && (
+        <>
+          <Divider
+            sx={{
+              width: '100%',
+              height: '10px',
+              m: '10px',
+            }}
+          />
+          <Typography variant='h4' component='h2' gutterBottom>
+            {`${title} (${restaurants?.length})`}
+          </Typography>
+          <Slider {...settings}>
+            {restaurants &&
+              restaurants.map((restaurant) => (
+                <Restaurant restaurant={restaurant} key={restaurant.blurhash} />
+              ))}
+          </Slider>
+        </>
+      )}
     </Box>
   )
 }

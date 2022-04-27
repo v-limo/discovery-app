@@ -13,7 +13,7 @@ export const Discovery = ({ restaurants }: Props) => {
   return (
     <Box className='discovery'>
       {restaurants.sections.map((section) => (
-        <Section section={section} />
+        <Section section={section} key={section.title} />
       ))}
     </Box>
   )

@@ -8,6 +8,7 @@ import { Paper, ThemeProvider } from '@mui/material'
 import { selectDarkmode } from './features/darkMode/darkModeSlice'
 import { Home } from './pages/Home'
 import Layout from './pages/Layout'
+import MapPage from './pages/MapPage'
 import NoMatch from './pages/NoMatch'
 import { darkTheme, lightTheme } from './theme'
 
@@ -17,7 +18,7 @@ const App = () => {
 
   axios.defaults.baseURL =
     process.env.NODE_ENV === 'production'
-      ? 'https://wolt-app.herokuapp.com/api/v1'
+      ? process.env.REACT_APP_API_URL
       : 'http://localhost:5000/api/v1'
 
   return (
@@ -27,6 +28,7 @@ const App = () => {
           <Routes>
             <Route path='/' element={<Layout />}>
               <Route index element={<Home />} />
+              <Route path='map' element={<MapPage />} />
               <Route path='*' element={<NoMatch />} />
             </Route>
           </Routes>

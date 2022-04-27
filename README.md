@@ -1,14 +1,15 @@
-# Summer 2021 internship
+# Summer 2021 internship assignment
 
 # Description
 
-This is very simple fullstack platform built with Reactjs, Express.
+This is very simple fullstack platform built with Reactjs, Express and mongodb.
 
 ## Features
 
-This app is a solution to both parts of wolt's 2021 preliminary [assignment](https://github.com/woltapp/summer2021-internship) requirements
+This app is an extended version of parts of wolt's 2021 preliminary [assignment](https://github.com/woltapp/summer2021-internship) requirements
 
 ## Live demo
+[![Netlify Status](https://api.netlify.com/api/v1/badges/e4915388-d53d-45bb-8ec2-a4d0bf0a6f79/deploy-status)](https://app.netlify.com/sites/woldrag/deploys)
 
 A [backend ](https://wolt-app.herokuapp.com) and [frontend](https://woldrag.netlify.app) live demos of the app are hosted on Heroku and netflify respectively.
 
@@ -90,6 +91,14 @@ npm run start
 cd frontend
 npm run build
 ```
+
+## Demos
+
+<p align="center" >
+<img src="/frontend/src/img/Wolt-Discovery.png">
+<br><br>
+<img src="/frontend/src/img/Wolt-Discovery2.png">
+</p>
 
 ### Contributing
 

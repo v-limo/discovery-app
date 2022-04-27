@@ -35,6 +35,7 @@ export const restaurantsSlice = createSlice({
 
   extraReducers: (builder) => {
     builder.addCase(fetchRestaurants.fulfilled, (state, { payload }) => {
+      state.restaurants = null
       state.restaurants = payload
       state.error = null
       state.loading = false

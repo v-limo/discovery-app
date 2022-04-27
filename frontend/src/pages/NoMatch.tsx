@@ -25,9 +25,7 @@ const NoMatch = () => (
       <Box sx={{ textAlign: 'center' }}>
         <img
           alt='Under development'
-          // src={img}
-          // src={require('../img/img_not_found.jpg')}
-          src='https://source.unsplash.com/random/400x200'
+          src={require('../img/img_not_found.jpg')}
           style={{
             marginTop: 50,
             display: 'inline-block',
