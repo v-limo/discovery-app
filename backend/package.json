@@ -41,7 +41,7 @@
     "lodash": "^4.17.15",
     "lusca": "^1.7.0",
     "mongodb-memory-server": "^6.3.1",
-    "mongoose": "^5.11.15",
+    "mongoose": "^5.13.15",
     "passport": "^0.6.0",
     "passport-facebook": "^3.0.0",
     "passport-github2": "^0.1.12",
